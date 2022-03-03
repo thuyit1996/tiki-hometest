@@ -1,0 +1,18 @@
+.test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.grid-item {
+  padding: 1px;
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(18, 223, 53);
+}
