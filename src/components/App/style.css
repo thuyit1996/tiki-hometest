@@ -2,11 +2,12 @@ body {
   margin: 0;
   padding: 0;
   background: url("https://cdn.wallpapersafari.com/99/34/Xm19kO.jpg");
-  background-size: cover;
 }
 
 .grid-section {
   margin-top: 20px;
+  height: 100vh;
+  /* overflow-y: scroll; */
 }
 
 .grid-item {
@@ -22,14 +23,14 @@ body {
 
 .box {
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
+  transform: translate(-50%, 10px);
+  width: 800px;
 }
 
 .form-section {
   text-align: center;
+  margin-top: 20px;
 }
 
 input {

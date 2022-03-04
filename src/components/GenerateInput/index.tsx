@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { inputErrorMessage } from "./helper";
 
 interface IProps {
   onSubmit: (value: string) => void;
@@ -7,14 +8,22 @@ interface IProps {
 const GenerateInput: React.FC<IProps> = ({ onSubmit }) => {
   const [value, setValue] = useState("");
 
+  const validate = () => {
+    const errorMessage = inputErrorMessage(value);
+    if (errorMessage) {
+      alert(errorMessage);
+    } else {
+      onSubmit(value);
+    }
+  };
+
   return (
-    <>
-      <h1>Generate the matrix</h1>
+    <div>
       <form
         className="form-section"
         onSubmit={(event) => {
           event.preventDefault();
-          onSubmit(value);
+          validate();
         }}
       >
         <input
@@ -27,7 +36,7 @@ const GenerateInput: React.FC<IProps> = ({ onSubmit }) => {
         />
         <input type="submit" value="Generate" />
       </form>
-    </>
+    </div>
   );
 };
 export default GenerateInput;

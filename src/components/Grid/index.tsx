@@ -19,7 +19,6 @@ const Grid: React.FC<IProps> = ({ values, onChange, size }) => {
         id="items"
         boxesPerRow={size}
         rowHeight={100}
-        style={{ height: "600px" }}
         className="grid-section"
       >
         {values.map((item) => (
