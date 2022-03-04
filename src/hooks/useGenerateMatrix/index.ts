@@ -1,29 +1,30 @@
-
-
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import { generateMatrix } from "./helper";
 
-
 const useGenerateMatrix = () => {
-
-  const [value, setValue] = useState<number>(0);
+  const [size, setSize] = useState<number>(0);
   const [maxTrixValues, setMatrixValues] = useState<number[]>([]);
 
   const setMatrixSize = (matrixSize: number) => {
-    setValue(matrixSize)
-  }
-  
+    setSize(matrixSize);
+  };
+
   useEffect(() => {
-    if (value) {
-      setMatrixValues(generateMatrix(value) as number[])
+    if (size) {
+      setMatrixValues(generateMatrix(size) as number[]);
     }
-  }, [value]);
+  }, [size]);
 
-  return [
-    maxTrixValues,
-    setMatrixSize
-  ]
+  const updateMatrixValues = (values: number[]) => {
+    setMatrixValues(values);
+  };
 
-}
+  return {
+    values: maxTrixValues,
+    updateValues: updateMatrixValues,
+    size,
+    setMatrixSize,
+  };
+};
 
-export default useGenerateMatrix
+export default useGenerateMatrix;

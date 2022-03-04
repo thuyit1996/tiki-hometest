@@ -1,12 +1,11 @@
-
-const flatArray = (array: number[][]): number[] => array.reduce((a, b) => [...a, ...b], [])
+const flatArray = (array: number[][]): number[] =>
+  array.reduce((a, b) => [...a, ...b], []);
 
 export const generateMatrix = (size: number) => {
-  console.log(size)
   let count = 0;
   let columnIndex = 0;
   const limitNumber = size ** 2;
-  const matrix = [...Array(size)].map(_ => Array(size).fill(0));
+  const matrix = [...Array(size)].map((_) => Array(size).fill(0));
   while (1) {
     for (let index = 0; index < size; index++) {
       count++;
@@ -25,4 +24,4 @@ export const generateMatrix = (size: number) => {
     }
     columnIndex += 1;
   }
-}
+};

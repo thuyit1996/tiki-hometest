@@ -1,9 +1,12 @@
-.test {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;
+body {
+  margin: 0;
+  padding: 0;
+  background: url("https://cdn.wallpapersafari.com/99/34/Xm19kO.jpg");
+  background-size: cover;
+}
+
+.grid-section {
+  margin-top: 20px;
 }
 
 .grid-item {
@@ -15,4 +18,49 @@
   justify-content: center;
   align-items: center;
   background: rgb(18, 223, 53);
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.form-section {
+  text-align: center;
+}
+
+input {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+input[type="text"] {
+  background: #fff;
+  width: 340px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding: 0 25px;
+  border-radius: 25px 0 0 25px;
+}
+
+input[type="submit"] {
+  position: relative;
+  border-radius: 0 25px 25px 0;
+  width: 150px;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #ffc107;
+}
+
+input[type="submit"]:hover {
+  background: #ff5722;
 }
