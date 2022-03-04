@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { generateMatrix } from "./helper";
 
 const useGenerateMatrix = () => {
-  const [size, setSize] = useState<number>(0);
+  const [size, setSize] = useState(0);
   const [maxTrixValues, setMatrixValues] = useState<number[]>([]);
 
   const setMatrixSize = (matrixSize: number) => {

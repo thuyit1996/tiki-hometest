@@ -1,4 +1,4 @@
-export const inputErrorMessage = (value) => {
+export const inputErrorMessage = (value: string) => {
   if (isNaN(Number(value))) {
     return "Please input the number only";
   }

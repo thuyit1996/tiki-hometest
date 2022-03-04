@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { swap } from "react-grid-dnd";
 import useGenerateMatrix from "../../hooks/useGenerateMatrix";
 import Grid from "../Grid";
@@ -8,7 +8,11 @@ import "./style.css";
 const App = () => {
   const { values, updateValues, setMatrixSize, size } = useGenerateMatrix();
 
-  const handleChange = (sourceId, sourceIndex, targetIndex, targetId) => {
+  const handleChange = (
+    sourceId: string,
+    sourceIndex: number,
+    targetIndex: number
+  ) => {
     const swapValues = swap(values, sourceIndex, targetIndex);
     updateValues(swapValues);
   };
