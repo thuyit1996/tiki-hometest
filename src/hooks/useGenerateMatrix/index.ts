@@ -23,6 +23,7 @@ const useGenerateMatrix = () => {
     values: maxTrixValues,
     updateValues: updateMatrixValues,
     setMatrixSize,
+    size
   };
 };
 

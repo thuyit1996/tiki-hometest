@@ -1,7 +1,7 @@
 import React from "react";
 import GridItem from "./GridItem";
 
-const Grid = ({ handleDragOver, handleDragStart, handleDrop, values }) => {
+const Grid = ({ handleDragOver, handleDragStart, handleDrop, values, size }) => {
   return (
     <div className="grid-section">
       <table>
@@ -22,6 +22,7 @@ const Grid = ({ handleDragOver, handleDragStart, handleDrop, values }) => {
                           onDrop={handleDrop}
                           rowIndex={rowIndex}
                           cellIndex={cellIndex}
+                          size={size}
                         />
                       </td>
                     ))

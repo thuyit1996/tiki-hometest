@@ -1,6 +1,3 @@
-export const flatArray = (array: number[][]): number[] =>
-  array.reduce((a, b) => [...a, ...b], []);
-
 export const generateMatrix = (size: number) => {
   if (size) {
     let count = 0;
@@ -12,7 +9,6 @@ export const generateMatrix = (size: number) => {
         count++;
         matrix[index][columnIndex] = count;
         if (count === limitNumber) {
-          console.log(matrix)
           return matrix;
         }
       }
@@ -21,7 +17,6 @@ export const generateMatrix = (size: number) => {
         count++;
         matrix[index][columnIndex] = count;
         if (count === limitNumber) {
-          console.log(matrix)
           return matrix;
         }
       }

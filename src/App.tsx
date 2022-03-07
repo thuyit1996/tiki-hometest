@@ -6,7 +6,7 @@ import './style.css';
 
 
 const App = () => {
-  const { values, updateValues, setMatrixSize } = useGenerateMatrix();
+  const { values, updateValues, setMatrixSize, size } = useGenerateMatrix();
 
   const swapBoxes = <T extends { rowIndex: number, cellIndex: number }>(fromBox: T, toBox: T) => {
     const newValues = [...values];
@@ -40,7 +40,12 @@ const App = () => {
       <GenerateInput
         onSubmit={(value: string) => setMatrixSize(Number(value))}
       />
-      <Grid handleDragOver={handleDragOver} handleDragStart={handleDragStart} handleDrop={handleDrop} values={values} />
+      <Grid
+        handleDragOver={handleDragOver}
+        handleDragStart={handleDragStart}
+        handleDrop={handleDrop}
+        values={values}
+        size={size} />
     </div >
   )
 }
