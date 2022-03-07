@@ -9,7 +9,7 @@ const Grid = ({ handleDragOver, handleDragStart, handleDrop, values, size }) => 
           {
             values.map((row, rowIndex) => {
               return (
-                <tr key={Math.random()}>
+                <tr key={rowIndex}>
                   {
                     row.map((cell, cellIndex) => (
                       <td>

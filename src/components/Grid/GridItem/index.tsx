@@ -16,7 +16,7 @@ const GridItem: React.FC<IProps<{ rowIndex: number, cellIndex: number }>> =
     const getClassNameForGridItem = () => {
       if (size <= 5) return 'w-100';
       else if (size < 7) return 'w-80';
-      else if (size < 9) return 'w-70'
+      else if (size < 9) return 'w-65'
       else return 'w-50'
     }
     return (
