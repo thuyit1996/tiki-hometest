@@ -1,24 +1,28 @@
 import React from "react";
-import { GridItem as DragItem } from "react-grid-dnd";
 
-interface IProps {
-  item: number;
+interface IProps<T> {
+  draggable: boolean,
+  rowIndex: number,
+  cellIndex: number,
+  data: number,
+  onDragStart: (data: T) => React.DragEventHandler,
+  onDragOver: (data: T) => React.DragEventHandler,
+  onDrop: (data: T) => React.DragEventHandler,
 }
 
-const GridItem: React.FC<IProps> = ({ item }) => {
-  return (
-    <DragItem key={item} className="grid-item">
+const GridItem: React.FC<IProps<{ rowIndex: number, cellIndex: number }>> =
+  ({ draggable, rowIndex, cellIndex, data, onDragStart, onDragOver, onDrop }) => {
+    return (
       <div
-        className="item"
-        style={{
-          width: "100%",
-          height: "100%",
-        }}
+        className="grid-item"
+        draggable={draggable}
+        onDragStart={onDragStart({ rowIndex, cellIndex })}
+        onDragOver={onDragOver({ rowIndex, cellIndex })}
+        onDrop={onDrop({ rowIndex, cellIndex })}
       >
-        {item}
+        {data}
       </div>
-    </DragItem>
-  );
-};
+    );
+  };
 
 export default GridItem;

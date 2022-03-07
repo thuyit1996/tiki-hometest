@@ -9,9 +9,11 @@
     "test": "jest --config ./jest.config.js"
   },
   "dependencies": {
+    "@shopify/draggable": "^1.0.0-beta.8",
     "antd": "^4.18.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-draggable": "^4.4.4",
     "react-gesture-responder": "^2.1.0",
     "react-grid-dnd": "^2.1.2"
   },

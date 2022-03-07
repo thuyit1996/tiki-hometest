@@ -6,18 +6,16 @@ body {
 
 .grid-section {
   margin-top: 20px;
-  height: 100vh;
   /* overflow-y: scroll; */
 }
 
 .grid-item {
   padding: 1px;
-}
-
-.item {
+  width: 100px;
+  height: 100px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   background: rgb(18, 223, 53);
 }
 

@@ -12,7 +12,8 @@ export const generateMatrix = (size: number) => {
         count++;
         matrix[index][columnIndex] = count;
         if (count === limitNumber) {
-          return flatArray(matrix);
+          console.log(matrix)
+          return matrix;
         }
       }
       columnIndex += 1;
@@ -20,7 +21,8 @@ export const generateMatrix = (size: number) => {
         count++;
         matrix[index][columnIndex] = count;
         if (count === limitNumber) {
-          return flatArray(matrix);
+          console.log(matrix)
+          return matrix;
         }
       }
       columnIndex += 1;
